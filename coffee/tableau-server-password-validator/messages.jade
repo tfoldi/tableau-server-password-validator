@@ -1,0 +1,12 @@
+tr
+  td(colspan="3")
+    style
+      | .password-error-messages { background: #fcc; padding:0; margin:0; }
+      | .password-error-messages li { color: red; font-size: 12px; padding: 1em 0.5em; }
+
+    .password-error-messages
+      ul
+        li.password_too_short(style="display:none") Password must contain at least 8 characters
+        li.password_no_lowercase(style="display:none") Password must contain lowercase letters
+        li.password_no_uppercase(style="display:none") Password must contain uppercase letters
+        li.password_no_numbers(style="display:none") Password must contain numeral characters

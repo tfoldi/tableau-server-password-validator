@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Tableau Web Data Connector -- Twitter</title>
+    <meta http-equiv="Cache-Control" content="no-store" />
+</head>
+<body>
+<table ng-if="editMode" class="ng-scope">
+  <tbody>
+  <!-- ngIf: requireCurrentPassword -->
+  <tr ng-if="requireCurrentPassword" class="ng-scope"><td class="tb-label">Current password</td><td class="tb-details-value"><div class="tb-input-wide tb-text-box-holder ng-isolate-scope" tb-text-box-model="fields.currentPassword" tb-text-box-required="true" tb-text-box-max-length="100" tb-text-box-focus="true" tb-text-box-disabled="busy" tb-test-id="edit-current-password-textbox"><div ng-class="{'tb-disabled': disabled, 'tb-enabled': !disabled, 'tb-clearable': (clearable &amp;&amp; !!textValue) }" class="tb-text-box-border tb-enabled"><input type="password" min="" max="" match-data="" placeholder="" ng-disabled="disabled" ng-required="required" ng-model="textValue" ng-keydown="keydown({$event: $event})" tb-enter="onEnter({$event: $event}); triggerEnter()" ng-paste="onPaste()" tb-auto-select="autoSelect" tb-focus="focus" tabindex="" tb-test-id="edit-current-password-textbox-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="tb-text-box-input tb-enable-selection ng-pristine ng-invalid ng-invalid-required" maxlength="100" required="required"></div><!-- ngIf: clearable --></div></td><td></td></tr>
+  <!-- end ngIf: requireCurrentPassword -->
+  <tr><td class="tb-label">New password</td><td class="tb-details-value"><div class="tb-input-wide tb-text-box-holder ng-isolate-scope" tb-text-box-model="fields.newPassword" tb-text-box-required="true" tb-text-box-max-length="100" tb-text-box-disabled="busy" tb-test-id="edit-new-password-textbox"><div ng-class="{'tb-disabled': disabled, 'tb-enabled': !disabled, 'tb-clearable': (clearable &amp;&amp; !!textValue) }" class="tb-text-box-border tb-enabled"><input type="password" min="" max="" match-data="" placeholder="" ng-disabled="disabled" ng-required="required" ng-model="textValue" ng-keydown="keydown({$event: $event})" tb-enter="onEnter({$event: $event}); triggerEnter()" ng-paste="onPaste()" tb-auto-select="autoSelect" tb-focus="focus" tabindex="" tb-test-id="edit-new-password-textbox-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="tb-text-box-input tb-enable-selection ng-pristine ng-invalid ng-invalid-required" maxlength="100" required="required"></div><!-- ngIf: clearable --></div></td><td></td></tr>
+  <tr>
+    <td class="tb-label">Confirm password</td>
+    <td class="tb-details-value">
+      <div class="tb-input-wide tb-text-box-holder ng-isolate-scope" tb-text-box-name="confirmPassword" tb-text-box-model="fields.confirmPassword" tb-text-box-required="true" tb-text-box-validation="tb-matching-inputs-validator" tb-match-data="fields.newPassword" tb-text-box-max-length="100" tb-text-box-disabled="busy" tb-test-id="edit-confirm-password-textbox"><div ng-class="{'tb-disabled': disabled, 'tb-enabled': !disabled, 'tb-clearable': (clearable &amp;&amp; !!textValue) }" class="tb-text-box-border tb-enabled"><input type="password" min="" max="" match-data="" placeholder="" ng-disabled="disabled" ng-required="required" ng-model="textValue" ng-keydown="keydown({$event: $event})" tb-enter="onEnter({$event: $event}); triggerEnter()" ng-paste="onPaste()" tb-auto-select="autoSelect" tb-focus="focus" tabindex="" tb-test-id="edit-confirm-password-textbox-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="tb-text-box-input tb-enable-selection ng-pristine ng-scope ng-isolate-scope ng-invalid ng-invalid-required ng-valid-match" name="confirmPassword" tb-matching-inputs-validator="" maxlength="100" required="required"></div>
+      <!-- ngIf: clearable --></div>
+      <!-- <div tb-hidden="!(passwordForm.confirmPassword.$error.match &amp;&amp; fields.confirmPassword.length > 0)" class="tb-padded tb-form-error tb-hidden">Passwords do not match</div> -->
+    </td>
+    <td class="tb-details-button-cell"><span tb-button-click="save()" tb-disabled="disableSaveButton()" class="tb-outline-button tb-disabled"><span ng-show="busy" class="tb-icon-spinner tb-lr-padded-narrow ng-hide"></span>Save Password</span></td>
+  </tr>
+  </tbody></table>
+
+  <script src="tableau-server-password-validator.js" type="text/javascript"></script>
+  </body>
+</html>
